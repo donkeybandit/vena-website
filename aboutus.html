@@ -1,4 +1,3 @@
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -37,7 +36,65 @@
             background:#fff;
             clear:left;
             max-width: 600px;
-            margin: auto;
+            margin: 80px auto;
+        }
+        #steve {
+            background-image: url("/assets/steve.jpg");
+            background-position-x: -10px;
+            background-position-y: -30px;
+            background-size: 250px;
+            background-repeat: no-repeat;
+            width: 120px;
+            height: 140px;
+            margin: 4px;
+        }
+        #matt {
+            background-image: url("/assets/matt.jpg");
+            background-position-x: -19px;
+            background-position-y: -5px;
+            background-size: 148px;
+            background-repeat: no-repeat;
+            width: 120px;
+            height: 140px;
+            margin: 4px;
+        }
+        #mukesh {
+            background-image: url("/assets/mukesh.jpg");
+            background-position-x: -67px;
+            background-position-y: -22px;
+            background-size: 236px;
+            background-repeat: no-repeat;
+            width: 120px;
+            height: 140px;
+            margin: 4px;
+        }
+        .pic-container {
+            margin: 0 20px 0 20px;
+            width: 128px;
+            background-color: #F8F9FA;
+            -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) inset;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) inset;
+            border-radius: 5px;
+            overflow: hidden;
+            border-bottom: 1px solid #EEE;
+            border-right: 1px solid #e9eaec;
+            border-left: 1px solid #e9eaec;
+            border-top: 1px solid #F7F8F9;
+        }
+        .pic-layout {
+            min-height: 150px;
+            background-color: whitesmoke;
+            margin: 20px 0 0px;
+            padding: 20px;
+        }
+        .pic-left {
+            float: left;
+        }
+        .pic-right {
+            float: right;
+        }
+        .pic-layout-right {
+            text-align: right;
         }
         .button {
             color: #fff;
@@ -76,14 +133,6 @@
             width: inherit;
             margin-top: 5px;
         }
-        .titlebox {
-            background-image: url("/assets/bg1-blur.jpg");
-            background-size: 600px;
-            margin: 100px auto 0 auto;
-            background-position: 0 340px;
-            height: 240px;
-            max-width: 600px;
-        }
         .pagetitle {
             margin-left: 20px;
             font-size: 26px;
@@ -104,15 +153,16 @@
         .e {
             color: #989898;
         }
-        @media (max-height: 720px) {
-            .titlebox {
-                height: 120px;
-                margin-top: 70px;
+        @media (max-width: 500px) {
+            .pic-container {
+                margin: 0 20px 18px 20px;
+            } 
+            
+            .pic-left, .pic-right {
+                float: none;
             }
-        }
-        @media (max-width: 670px) {
-            .heading {
-                text-align: center;
+            .pic-layout-right {
+                text-align: left;
             }
         }
 	</style>
@@ -123,23 +173,49 @@
 <h1 class="logo-text"><span style="color:#334ea1;"><span class="v">V</span></span><span class="e">e</span><span style="color:#334ea1;"><span class="n">n</span><span class="a">a</span></span></h1>
 </div>
 
-<div class="titlebox"></div>
+<div class="top-signup"><a aria-label="Sign Up Free" class="button small" href="subscribe.html" role="button">Sign Up Free</a></div>
+</div>
 
 <div id="mc_embed_signup">
-<h1 class="pagetitle"><span style="color:#bb8d59;">Subscription Confirmed</span></h1>
+<h1 class="pagetitle"><span style="color:#bb8d59;">About Us - Vena Founders</span></h1>
 
-<p class="justify">Thank you for signing up! You are amazing!<br />
-<br />
-You have great foresight to get involved with something new, you're a true pioneer. The number of people who signup to Vena is crucial to it's success, so if you
-    would like to see a change in how agencies work, please spread the word! We need more pioneers like you.
-<br />
-<br />
-We will let you know when the app is available. At the moment we are beavering away trying to find the absolute best way to improve your teaching placement experience.
-<br />
-<br />
-You can expect to see occasional updates from us and we may ask you to fill in brief questionnaires from time to time. We know your time is valuable and we thrive on your feedback.
+<p class="justify">
+    Here are three people that think UK schools can be even better if they cut down their costs. Thinking alone doesn't really cut it though, so they have put a plan
+    in place to make the lives of substitute teachers and schools much simpler.
+    <br />
 </p>
-&nbsp;
+
+<div class="pic-layout">
+
+    <div class="pic-container pic-left">
+        <div id="steve"></div>
+    </div>
+    <p>
+        <strong>Steve Cunningham</strong><br>
+        Rocket Scientist turned School Teacher / Entrepreneur - Steve conceived Vena and is in the process of making it a reality.
+    </p>
+</div>
+<div class="pic-layout pic-layout-right">
+    <div class="pic-container pic-right">
+        <div id="matt"></div>
+    </div>
+    <p>
+        <strong>Matt Clark</strong><br>
+        Front End Developer - Spends every spare moment writing programs and thinking about how to promote Vena.
+    </p>
+</div>
+<div class="pic-layout">
+    <div class="pic-container pic-left">
+        <div id="mukesh"></div>
+    </div>
+    <p>
+        <strong>Mukesh Chandnani</strong><br>
+        Technical Architect and Lead Developer - Makes the app work and grow, ready to handle the huge number of people who are going to use Vena.
+    </p>
+</div>
+
+<br />
+<br />
 <p class="copyright">Copyright &copy; 2016 VenaTeach. All Rights Reserved.</p>
 </div>
 <!-- Google Analytics --><script>
